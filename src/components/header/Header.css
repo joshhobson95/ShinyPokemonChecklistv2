@@ -1,0 +1,16 @@
+header{
+    background-color: rgb(247, 148, 247);
+    height: 10vh;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    top: 0;
+    justify-content: center;
+    
+}
+.navlinks{
+    height: 5vh;
+    width: 5vw;
+    background-color: rgb(52, 185, 92);
+    color: aqua;
+}

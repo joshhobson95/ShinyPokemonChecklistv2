@@ -1,0 +1,17 @@
+
+
+
+
+
+
+.card{
+    height: 25vh;
+    width: 20vw;
+   
+    background-color: rgb(167, 230, 154);
+    box-shadow: 3px;
+    box-sizing: border-box;
+    border: 2px solid rgb(175, 218, 178);
+    margin-bottom: 10px;
+    color: black;
+    }

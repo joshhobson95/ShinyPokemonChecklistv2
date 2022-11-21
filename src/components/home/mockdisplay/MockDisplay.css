@@ -1,0 +1,9 @@
+.mockdisplay{
+    margin-top: 10vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1vw 1vh;
+
+     
+}
