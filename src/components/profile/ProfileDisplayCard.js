@@ -25,6 +25,7 @@ function ProfileDisplayCard({ usersPokemon }) {
   return (
     <div className="card">
         <h2>{usersPokemon.pokemonName}</h2>
+        <h2>{usersPokemon.pokemonNickname}</h2>
         <img alt="pokemonshiny" src={usersPokemon.pokemonShinyImg}/>
 
     </div>

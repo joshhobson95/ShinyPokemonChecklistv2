@@ -14,8 +14,8 @@ module.exports = {
 
     addPokemon: async (req, res) => {
         try {
-            const {id, pokemonQuantity, pokemonGameFound, pokemonMega, pokemonGmax, pokemontableId, userId} = req.body
-            await UsersPokemon.create({id, pokemonQuantity, pokemonGameFound, pokemonMega, pokemonGmax, pokemontableId, userId})
+            const {id, pokemonQuantity, pokemonGameFound, pokemonMega, pokemonGmax, pokemonNickname, pokemontableId, userId} = req.body
+            await UsersPokemon.create({id, pokemonQuantity, pokemonGameFound, pokemonMega, pokemonGmax, pokemonNickname, pokemontableId, userId})
             res.sendStatus(200)
         } catch (error) {
             console.log('ERROR IN addPokemon')
@@ -28,7 +28,7 @@ module.exports = {
 
         try {
             const {userId} = req.params
-            const [userspokemon, metadata] = await sequelize.query(`select userspokemons."pokemonQuantity", userspokemons."pokemonGameFound", userspokemons."pokemonMega", userspokemons."pokemonGmax", userspokemons."userId", pokemontables."id", pokemontables."pokemonImg", pokemontables."pokemonName", pokemontables."pokemonShinyImg", users."id"
+            const [userspokemon, metadata] = await sequelize.query(`select userspokemons."pokemonQuantity", userspokemons."pokemonGameFound", userspokemons."pokemonMega", userspokemons."pokemonGmax", userspokemons."pokemonNickname", userspokemons."userId", pokemontables."id", pokemontables."pokemonImg", pokemontables."pokemonName", pokemontables."pokemonShinyImg", users."id"
             from userspokemons
             full outer join
             pokemontables on userspokemons."pokemontableId"=pokemontables."id"

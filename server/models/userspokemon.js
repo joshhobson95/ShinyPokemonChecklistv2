@@ -19,6 +19,7 @@ module.exports = {
         pokemonGameFound: DataTypes.STRING, 
         pokemonMega: DataTypes.BOOLEAN,
         pokemonGmax: DataTypes.BOOLEAN, 
+        pokemonNickname: DataTypes.STRING,
         createdAt: {
             type: DataTypes.DATE,
             allowNull: true
