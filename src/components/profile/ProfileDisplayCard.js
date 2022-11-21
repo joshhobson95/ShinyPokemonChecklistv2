@@ -24,7 +24,8 @@ function ProfileDisplayCard({ usersPokemon }) {
 
   return (
     <div className="card">
-        <h2>{usersPokemon.pokemontableId}</h2>
+        <h2>{usersPokemon.pokemonName}</h2>
+        <img alt="pokemonshiny" src={usersPokemon.pokemonShinyImg}/>
 
     </div>
   );
