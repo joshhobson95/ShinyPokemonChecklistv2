@@ -1,22 +1,22 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import "./MockDisplay.css";
-import MockDisplayCard from "./MockDisplayCard";
+import MockDisplayCard3 from "./MockDisplayCard3";
 
 
 
 
-function MockDisplay() {
+function MockDisplay3() {
 
 
-  const [pokemonTable, setPokemonTable] = useState([]);
+  const [pokemonTable3, setPokemonTable3] = useState([]);
   const [search, setSearch] = useState("")
 
   useEffect(() => {
     axios
-      .get("/home")
+      .get("/3")
       .then((res) => {
-        setPokemonTable(res.data);
+        setPokemonTable3(res.data);
         console.log(res.data);
       })
       .catch((err) => {
@@ -25,14 +25,14 @@ function MockDisplay() {
   }, []);
 
 
-  const mappedPokemonTable = pokemonTable.filter((pokemonTable=> {
+  const mappedPokemonTable = pokemonTable3.filter((pokemonTable3=> {
 if (search === "") {
-  return pokemonTable
-} else if (pokemonTable.pokemonName.toLowerCase().includes(search.toLowerCase())){
-  return pokemonTable
+  return pokemonTable3
+} else if (pokemonTable3.pokemonName.toLowerCase().includes(search.toLowerCase())){
+  return pokemonTable3
 }
-  })).map((pokemonTable) => {
-    return <MockDisplayCard pokemonTable={pokemonTable} />;
+  })).map((pokemonTable3) => {
+    return <MockDisplayCard3 pokemonTable3={pokemonTable3} />;
   });  
 
 
@@ -44,4 +44,4 @@ if (search === "") {
     </div>);
 }
 
-export default MockDisplay;
+export default MockDisplay3;

@@ -11,7 +11,7 @@ module.exports = {
 
         pokemonName: DataTypes.STRING,
         
-        id: {
+        pokemontableid: {
             type: DataTypes.INTEGER,
             autoIncrement: true,
             allowNull: false,

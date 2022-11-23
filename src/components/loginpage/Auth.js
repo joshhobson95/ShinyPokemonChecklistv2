@@ -49,47 +49,65 @@ const Auth = () => {
    return (
        <main className='loginform'>
            <h1>Welcome!</h1>
-           <form className='form auth-form' onSubmit={submitHandler}>
-               <input
-                type='text'
-                placeholder='username'
-                value={username}
-                onChange={e => setUsername(e.target.value)}
-                   className='form-input'/>
-                   
-               <input
-                type='password'
-                placeholder='password'
-                value={password}
-                onChange={e => setPassword(e.target.value)}
-                   className='form-input'/>
-
-               <input
-                type='email'
-                placeholder='email'
-                value={email}
-                onChange={e => setEmail(e.target.value)}
-                   className='form-input'/>
-               <input
-                type='profilepicture'
-                placeholder='Paste IMG url for Profile Picture'
-                value={profilepicture}
-                onChange={e => setProfilePicture(e.target.value)}
-                   className='form-input'/>
-                   
-               <button className='form-btn'>
-                   {register ? 'Sign Up' : 'Login'}
-               </button>
-           </form>
-           <button className='form-btn' onClick={() => setRegister(!register)}>Need to {register ? 'Login' : 'Sign Up'}?</button>
-
-            
-
-
+        {register ? (
+    <form className='form auth-form' onSubmit={submitHandler}>
+    <input
+     type='text'
+     placeholder='username'
+     value={username}
+     onChange={e => setUsername(e.target.value)}
+        className='form-input'/>
         
+    <input
+     type='password'
+     placeholder='password'
+     value={password}
+     onChange={e => setPassword(e.target.value)}
+        className='form-input'/>
+
+    <input
+     type='email'
+     placeholder='email'
+     value={email}
+     onChange={e => setEmail(e.target.value)}
+        className='form-input'/>
+    <input
+     type='profilepicture'
+     placeholder='Paste IMG url for Profile Picture'
+     value={profilepicture}
+     onChange={e => setProfilePicture(e.target.value)}
+        className='form-input'/>
+        
+    <button className='form-btn'>
+        {register ? 'Sign Up' : 'Login'}
+    </button>
+</form>
+
+        ) : (
+            <form className='form auth-form' onSubmit={submitHandler}>
+            <input
+             type='text'
+             placeholder='username'
+             value={username}
+             onChange={e => setUsername(e.target.value)}
+                className='form-input'/>
+                
+            <input
+             type='password'
+             placeholder='password'
+             value={password}
+             onChange={e => setPassword(e.target.value)}
+                className='form-input'/>
 
 
-
+                
+            <button className='form-btn'>
+                {register ? 'Sign Up' : 'Login'}
+            </button>
+        </form>
+        )}
+        
+           <button className='form-btn' onClick={() => setRegister(!register)}>Need to {register ? 'Login' : 'Sign Up'}?</button>
 
 
        </main>

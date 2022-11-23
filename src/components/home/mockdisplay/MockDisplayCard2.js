@@ -6,7 +6,7 @@ import axios from "axios";
 import AuthContext from "../../../store/authContext";
 
 
-function MockDisplayCard({ pokemonTable }) {
+function MockDisplayCard2({ pokemonTable2 }) {
   const { token, userId } = useContext(AuthContext);
   const navigate = useNavigate();
   const options = [  
@@ -73,7 +73,7 @@ function MockDisplayCard({ pokemonTable }) {
             pokemonGmax,
             pokemonNickname,
             userId,
-            pokemontablePokemontableid: pokemonTable.pokemontableid,
+            pokemontablePokemontableid: pokemonTable2.pokemontableid,
             
           },
           {
@@ -102,11 +102,11 @@ function MockDisplayCard({ pokemonTable }) {
   return (
     <div className="card">
       <form className="form-pokemon-card" >
-        <div key={pokemonTable.pokemontableid}>
-          <h3>{pokemonTable.pokemontableid}</h3>
-          <h2>{pokemonTable.pokemonName}</h2>
-          <img alt="pokemon images" src={pokemonTable.pokemonImg} />
-          <img alt="shiny pokemon images" src={pokemonTable.pokemonShinyImg} />
+        <div key={pokemonTable2.pokemontableid}>
+          <h3>{pokemonTable2.pokemontableid}</h3>
+          <h2>{pokemonTable2.pokemonName}</h2>
+          <img alt="pokemon images" src={pokemonTable2.pokemonImg} />
+          <img alt="shiny pokemon images" src={pokemonTable2.pokemonShinyImg} />
      
 
           <div>
@@ -133,4 +133,4 @@ function MockDisplayCard({ pokemonTable }) {
   );
 }
 
-export default MockDisplayCard;
+export default MockDisplayCard2;

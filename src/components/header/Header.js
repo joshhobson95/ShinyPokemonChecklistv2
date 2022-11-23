@@ -1,7 +1,7 @@
 import './Header.css'
 import { useContext } from 'react'
 import {NavLink} from 'react-router-dom'
-import SocialCard from '../loginpage/SocialCard'
+
 
 
 import AuthContext from '../../store/authContext'
@@ -28,9 +28,7 @@ function Header () {
         <div>
         <NavLink to='/profile'>Profile</NavLink>
         </div>
-        <div>
-            <SocialCard />
-        </div>
+     
 
         <div>
         <button className='logout-btn' onClick={() => authCtx.logout()}>Logout</button>

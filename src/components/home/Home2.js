@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import './Home.css'
-import MockDisplay from './mockdisplay/MockDisplay'
+import MockDisplay2 from './mockdisplay/MockDisplay2'
 import axios from 'axios'
 import { NavLink } from 'react-router-dom'
 
@@ -8,7 +8,7 @@ import { NavLink } from 'react-router-dom'
 
 
 
-function Home() {
+function Home2() {
 
 
   const [everyUsersPokemon, setEveryUsersPokemon] = useState([])
@@ -41,14 +41,15 @@ function Home() {
        <p>Gen 9 Dex</p>
        <p>Total Number of Shinies Registered across all accounts:</p>
        <h2>{everyUsersPokemon.length}</h2>
+      
 
        <NavLink to='/' exact={true}>Gens 1-3</NavLink>
        <NavLink to='/2' exact={true}>Gens 4-6</NavLink>
        <NavLink to='/3' exact={true}>Gens 5-9, including Regional Forms</NavLink>
 
      
-
-      <MockDisplay />
+<MockDisplay2 />
+      
 
 
    
@@ -56,4 +57,4 @@ function Home() {
   )
 }
 
-export default Home
+export default Home2;

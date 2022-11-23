@@ -3,6 +3,7 @@ import axios from "axios";
 // import "./UsersPokemonDisplay.css";
 import ProfileDisplayCard from './ProfileDisplayCard'
 import AuthContext from "../../store/authContext";
+import {NavLink} from 'react-router-dom'
 
  
  
@@ -16,6 +17,8 @@ const { token, userId } = useContext(AuthContext);
 
 
   const [usersPokemon, setUsersPokemon] = useState([]);
+  const [search, setSearch] = useState('')
+ 
 
 
   const getUsersPokemon = useCallback(() => {
@@ -29,14 +32,30 @@ useEffect(() => {
 }, [getUsersPokemon])
 
 
-console.log(usersPokemon.userId)
-console.log(usersPokemon)
+
+
   
-  const usersPokemonMapped = usersPokemon.map((usersPokemon) => {
+  const usersPokemonMapped = usersPokemon.filter((usersPokemon)=>{
+    if (search === "") {
+      return usersPokemon
+    } else if (usersPokemon.pokemonName.toLowerCase().includes(search.toLowerCase())){
+      return usersPokemon
+    }
+  }).map((usersPokemon) => {
     return <ProfileDisplayCard usersPokemon={usersPokemon} />;
   });
 
-  return <div className="mockdisplay">{usersPokemonMapped}</div>;
+   
+  
+  
+
+  return <div className="mockdisplay">
+      <input type="text" placeholder="search.." onChange={e => setSearch(e.target.value)}></input>
+  
+      <NavLink to='AllPokemonDisplayed'>All Pokemon Displayed</NavLink>
+    {usersPokemonMapped}
+    
+    </div>;
 }
  
 export default UsersPokemonDisplay;
