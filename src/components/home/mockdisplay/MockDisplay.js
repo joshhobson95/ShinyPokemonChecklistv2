@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import "./MockDisplay.css";
 import MockDisplayCard from "./MockDisplayCard";
+import LoadingImg from '../../../assets/LoadingGif.gif'
 
 
 
@@ -10,15 +11,19 @@ function MockDisplay() {
 
 
   const [pokemonTable, setPokemonTable] = useState([]);
+  const [loading, setLoading] = useState(true)
   const [search, setSearch] = useState("")
 
   useEffect(() => {
     axios
       .get("/home")
+     
       .then((res) => {
         setPokemonTable(res.data);
-        console.log(res.data);
+        
+        
       })
+      .finally(() =>setLoading(false))
       .catch((err) => {
         console.log(err);
       });
@@ -38,9 +43,16 @@ if (search === "") {
 
 
 
-  return( <div className="mockdisplay">
-     <input type="text" placeholder="search.." onChange={e => setSearch(e.target.value)}></input>
+  return( 
+  <div className="mockdisplay">
+     <input  className="searchbar" type="text" placeholder="search.." onChange={e => setSearch(e.target.value)}></input>
+     {loading ? (
+      <img className="loading" alt="Loading..."src={LoadingImg} />
+     ) : ( 
+      <div className="mockdisplay">
     {mappedPokemonTable}
+      </div>
+     )}
     </div>);
 }
 

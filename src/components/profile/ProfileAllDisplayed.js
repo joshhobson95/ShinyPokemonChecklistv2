@@ -3,19 +3,21 @@ import './ProfileAllDisplayed.css'
 import AllCard from './AllCard';
 import axios from 'axios'
 import AuthContext from "../../store/authContext";
+import LoadingImg from '../../assets/LoadingGif.gif'
 
 function ProfileAllDisplayed() {
 
-  const { userId, token } = useContext(AuthContext);
+  const { userId } = useContext(AuthContext);
  const [usersPokemonAll, setUsersPokemonAll] = useState([])
+ const [loading, setLoading] = useState(true)
  const [search, setSearch] = useState("")
 
 
-//Different Get Rqerst with Users Pokemon Laid on top of all other pokemon. 
 
 const getUsersPokemonAll = useCallback(() => {
   axios.get(`/userspokemonall/${userId}`)
   .then(res => setUsersPokemonAll(res.data))  
+  .finally(() =>setLoading(false))
   .catch(err => console.log(err))
 }, [userId])
 
@@ -39,9 +41,16 @@ const usersPokemonAllMapped = usersPokemonAll.filter((usersPokemonAll)=>{
   return (
     <div className='a'>
       <input type="text" placeholder="search.." onChange={e => setSearch(e.target.value)}></input>
-      ProfileAllDisplayed
+
+    {loading ? (
+      <img className="loading" alt="Loading..."src={LoadingImg} />
+    ) : (
+      <div className='a'>
       {usersPokemonAllMapped}
       </div>
+      )}
+      </div>
+
   )
 }
 

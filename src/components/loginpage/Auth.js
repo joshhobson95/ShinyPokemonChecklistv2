@@ -1,6 +1,7 @@
 import {useState, useContext} from 'react'
 import axios from 'axios'
 import './Auth.css'
+import Swal from 'sweetalert2'
 
 
 import AuthContext from '../../store/authContext'
@@ -9,7 +10,7 @@ const Auth = () => {
    const [username, setUsername] = useState('')
    const [password, setPassword] = useState('')
    const [email, setEmail] = useState('')
-   const [profilepicture, setProfilePicture] = useState('')
+ 
    const [register, setRegister] = useState(true)
  
     const authCtx = useContext(AuthContext);
@@ -22,7 +23,7 @@ const Auth = () => {
             username,
             password, 
             email, 
-            profilepicture
+            
         }
         const url = 'http://localhost:5050'
 
@@ -30,13 +31,14 @@ const Auth = () => {
             .then((res) => {
                 console.log('AFTER AUTH', res.data)
                 authCtx.login(res.data.token, res.data.exp, res.data.userId)
+                Swal.fire('Welcome')
             })
             .catch(error => {
                 setUsername('')
                 setPassword('')
                 setEmail('')
                 console.log('ERROR')
-                alert('Cannot Reach Server')
+                Swal.fire("Error creating your account, please try again")
             })
 
 
@@ -71,12 +73,7 @@ const Auth = () => {
      value={email}
      onChange={e => setEmail(e.target.value)}
         className='form-input'/>
-    <input
-     type='profilepicture'
-     placeholder='Paste IMG url for Profile Picture'
-     value={profilepicture}
-     onChange={e => setProfilePicture(e.target.value)}
-        className='form-input'/>
+   
         
     <button className='form-btn'>
         {register ? 'Sign Up' : 'Login'}

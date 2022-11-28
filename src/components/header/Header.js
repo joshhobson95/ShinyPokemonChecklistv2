@@ -1,6 +1,7 @@
 import './Header.css'
 import { useContext } from 'react'
 import {NavLink} from 'react-router-dom'
+import Swal from 'sweetalert2'
 
 
 
@@ -9,29 +10,113 @@ import AuthContext from '../../store/authContext'
 function Header () {
     const authCtx = useContext(AuthContext)
 
+const logout = () => {
+ Swal.fire('You have been logged out')
+authCtx.logout()
+
+}
+
+
+
 
     return (
         <header>
- <h1>Shiny Pokemon Checklist</h1>
+
+
+ <h1 className='title'>Shiny Pokemon Checklist</h1>
 
 
  <div className='navlinks'>
         <div>
-            <NavLink to='/'>Home</NavLink>
+            <NavLink to='/'
+            style={({ isActive }) =>
+            isActive
+              ? {
+                  color: '#fff',
+                  textDecoration: "none",
+                  fontWeight: "1000",
+                  fontSize : "16pt",
+                  backgroundColor: "rgb(0, 0, 0)",
+                   
+                  
+                }
+              : { 
+                color: '#fff',
+                textDecoration: "none",
+                fontWeight: "1000",
+                fontSize : "16pt",
+                
+            }}>Home</NavLink>
         </div>
         <div >
-        <NavLink to='/auth'>Login or Signup</NavLink>
+        <NavLink to='/auth'
+            style={({ isActive }) =>
+            isActive
+              ? {
+                  color: '#fff',
+                  textDecoration: "none",
+                  fontWeight: "1000",
+                  fontSize : "16pt",
+                  backgroundColor: "rgb(0, 0, 0)",
+                  
+
+                }
+              : { 
+                color: '#fff',
+                textDecoration: "none",
+                fontWeight: "1000",
+                fontSize : "16pt",
+                          
+            }}
+        >Login or Signup</NavLink>
         </div>
         <div>
-        <NavLink to='/wiki'>Shiny Hunting Methods Wiki</NavLink>
+        <NavLink to='/wiki'
+        style={({ isActive }) =>
+        isActive
+          ? {
+              color: '#fff',
+              textDecoration: "none",
+              fontWeight: "1000",
+              fontSize : "16pt",
+              backgroundColor: "rgb(0, 0, 0)",
+              
+
+            }
+          : { 
+            color: '#fff',
+            textDecoration: "none",
+            fontWeight: "1000",
+            fontSize : "16pt",
+                      
+        }}
+        >Shiny Hunting Methods Wiki</NavLink>
         </div>
         <div>
-        <NavLink to='/profile'>Profile</NavLink>
+        <NavLink to='/profile'
+        style={({ isActive }) =>
+        isActive
+          ? {
+              color: '#fff',
+              textDecoration: "none",
+              fontWeight: "1000",
+              fontSize : "16pt",
+              backgroundColor: "rgb(0, 0, 0)",
+              
+
+            }
+          : { 
+            color: '#fff',
+            textDecoration: "none",
+            fontWeight: "1000",
+            fontSize : "16pt",
+            borderRadius: '30%'           
+        }}>Profile</NavLink>
         </div>
      
 
         <div>
-        <button className='logout-btn' onClick={() => authCtx.logout()}>Logout</button>
+        <button className='logout-btn' onClick={() => logout()} >Logout</button>
         </div>
  </div>
         </header>

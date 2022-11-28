@@ -43,9 +43,11 @@
   }
 
 img{
-  height: clamp(10vh, 100, 15vh);
-  width: clamp(10vw, 100, 15vw);
+    height: clamp(1vh, 100, 15vh);
+    width: clamp(1vw, 100, 15vw);
   justify-self: center;
+  overflow:auto;
+  
 }
 @media only screen and (max-width: 950px) {
   .card{
@@ -63,9 +65,7 @@ img{
     img{
       display: flex;
       justify-content: center;
-      height: clamp(10vh, 100, 15vh);
-      width: clamp(10vw, 100, 15vw);
-      
+      overflow:visible;
     }
     .imgout{
       display: flex;

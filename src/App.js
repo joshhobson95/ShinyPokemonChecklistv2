@@ -11,6 +11,7 @@ import Profile from './components/profile/Profile';
 import Wiki from './components/wiki/Wiki';
 import ProfileAllDisplayed from './components/profile/ProfileAllDisplayed';
 import AuthContext from './store/authContext'; 
+import Footer from './components/footer/Footer';
 
 
 
@@ -39,7 +40,7 @@ const authCtx = useContext(AuthContext);
     
          
         </Routes>
-      
+      <Footer />
 
     </div>
   )

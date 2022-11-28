@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import "./MockDisplay.css";
 import MockDisplayCard3 from "./MockDisplayCard3";
+import LoadingImg from '../../../assets/LoadingGif.gif'
 
 
 
@@ -10,6 +11,7 @@ function MockDisplay3() {
 
 
   const [pokemonTable3, setPokemonTable3] = useState([]);
+  const [loading, setLoading] = useState(true)
   const [search, setSearch] = useState("")
 
   useEffect(() => {
@@ -17,15 +19,16 @@ function MockDisplay3() {
       .get("/3")
       .then((res) => {
         setPokemonTable3(res.data);
-        console.log(res.data);
+     
       })
+      .finally(() =>setLoading(false))
       .catch((err) => {
         console.log(err);
       });
   }, []);
 
 
-  const mappedPokemonTable = pokemonTable3.filter((pokemonTable3=> {
+  const mappedPokemonTable3 = pokemonTable3.filter((pokemonTable3=> {
 if (search === "") {
   return pokemonTable3
 } else if (pokemonTable3.pokemonName.toLowerCase().includes(search.toLowerCase())){
@@ -38,10 +41,17 @@ if (search === "") {
 
 
 
-  return( <div className="mockdisplay">
-     <input type="text" placeholder="search.." onChange={e => setSearch(e.target.value)}></input>
-    {mappedPokemonTable}
-    </div>);
-}
+  return( 
+    <div className="mockdisplay">
+       <input type="text" placeholder="search.." onChange={e => setSearch(e.target.value)}></input>
+       {loading ? (
+        <img className="loading" alt="Loading..."src={LoadingImg} />
+       ) : ( 
+        <div className="mockdisplay">
+      {mappedPokemonTable3}
+        </div>
+       )}
+      </div>);
+  }
 
 export default MockDisplay3;

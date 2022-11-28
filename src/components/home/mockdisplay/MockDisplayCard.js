@@ -1,14 +1,15 @@
 import React from "react";
 import "./MockDisplayCard.css";
-import { useState, useContext, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useState, useContext} from "react";
+import Swal from "sweetalert2";
 import axios from "axios";
 import AuthContext from "../../../store/authContext";
 
 
+
 function MockDisplayCard({ pokemonTable }) {
   const { token, userId } = useContext(AuthContext);
-  const navigate = useNavigate();
+
   const options = [  
     { value: "Red", label: "Red" },
     { value: "Blue", label: "Blue" },
@@ -84,9 +85,10 @@ function MockDisplayCard({ pokemonTable }) {
         )
         .then(() => {
           console.log("sucess")
-          alert("Your Pokemon has been Added to your List")
+         Swal.fire('Pokemon Added to your Checklist!')
         })
         .catch((err) => console.log(err));
+        Swal.fire('You are not logged in!')
   };
 
   const handleChange = event => {
@@ -101,14 +103,17 @@ function MockDisplayCard({ pokemonTable }) {
 
   return (
     <div className="card">
-      <form className="form-pokemon-card" >
+      <form className="pics-and-form" >
         <div key={pokemonTable.pokemontableid}>
-          <h3>{pokemonTable.pokemontableid}</h3>
-          <h2>{pokemonTable.pokemonName}</h2>
+          
+          <h2 className="pname">{pokemonTable.pokemonName.toUpperCase()}</h2>
+<div className="imgout">
+          <div className="imgcontainer">
           <img alt="pokemon images" src={pokemonTable.pokemonImg} />
           <img alt="shiny pokemon images" src={pokemonTable.pokemonShinyImg} />
-     
-
+          </div>
+</div>
+<div className="form">
           <div>
     <select value={pokemonGameFound} onChange={handleChange}  pokemonGameFound={pokemonGameFound}>
       {options.map(option => (
@@ -125,8 +130,8 @@ function MockDisplayCard({ pokemonTable }) {
           <label for="Gmax">Gmax </label>
           <input type="checkbox" id="Gmax" name="Gmax" onChange={e => setPokemonGmax(e.target.value)}/>
           <input type="text" id="Nickname" name="Nickname" placeholder="Pokemon's Nickname" onChange={e => setPokemonNickname(e.target.value)} />
-
         </div>
+</div>
         <button onClick={handleSubmit} >Submit</button>
       </form>
     </div>

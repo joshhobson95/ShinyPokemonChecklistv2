@@ -42,9 +42,63 @@ function Home3() {
        <p>Total Number of Shinies Registered across all accounts:</p>
        <h2>{everyUsersPokemon.length}</h2>
        
-       <NavLink to='/' exact={true}>Gens 1-3</NavLink>
-       <NavLink to='/2' exact={true}>Gens 4-6</NavLink>
-       <NavLink to='/3' exact={true}>Gens 5-9, including Regional Forms</NavLink>
+       <NavLink to='/' exact={true}
+        style={({ isActive }) =>
+        isActive
+          ? {
+              color: '#fff',
+              textDecoration: "none",
+              fontWeight: "1000",
+              fontSize : "16pt",
+              backgroundColor: "rgb(0, 0, 0)",
+               
+              
+            }
+          : { 
+            color: '#fff',
+            textDecoration: "none",
+            fontWeight: "1000",
+            fontSize : "16pt",
+            
+        }}>Gens 1-3|</NavLink>
+       <NavLink to='/2' exact={true}
+        style={({ isActive }) =>
+        isActive
+          ? {
+              color: '#fff',
+              textDecoration: "none",
+              fontWeight: "1000",
+              fontSize : "16pt",
+              backgroundColor: "rgb(0, 0, 0)",
+               
+              
+            }
+          : { 
+            color: '#fff',
+            textDecoration: "none",
+            fontWeight: "1000",
+            fontSize : "16pt",
+            
+        }}>Gens 4-6|</NavLink>
+       <NavLink to='/3' exact={true}
+        style={({ isActive }) =>
+        isActive
+          ? {
+              color: '#fff',
+              textDecoration: "none",
+              fontWeight: "1000",
+              fontSize : "16pt",
+              backgroundColor: "rgb(0, 0, 0)",
+               
+              
+            }
+          : { 
+            color: '#fff',
+            textDecoration: "none",
+            fontWeight: "1000",
+            fontSize : "16pt",
+            
+        }}>Gens 5-9|</NavLink>
 
 
      

@@ -1,9 +1,8 @@
-// import DropDownGameSelect from "./DropDownGameSelect";
-// import "./ProfileDisplayCard.css";
-import { useState, useContext, useEffect, useCallback } from "react";
-import { useNavigate } from "react-router-dom";
-import axios from "axios";
 
+import "./ProfileDisplayCard.css";
+import {  useContext} from "react";
+import axios from "axios";
+import Swal from "sweetalert2";
 import AuthContext from "../../store/authContext";
 
 function ProfileDisplayCard({ usersPokemon }) {
@@ -17,8 +16,9 @@ function ProfileDisplayCard({ usersPokemon }) {
         },
       })
       .then(() => {
-        alert("pokemon deleted");
-        window.location.reload(false);
+        Swal.fire("Your Pokemon was Deleted")
+        // setTimeout(2000)
+        .finally(()=>window.location.reload(false))
       })
       .catch((err) => {
         console.log(err);
@@ -29,13 +29,15 @@ function ProfileDisplayCard({ usersPokemon }) {
 
   return (
     <div className="card">
-      <p>{usersPokemon.id}</p>
-      <h2>{usersPokemon.pokemonName}</h2>
+      
+      <h2>{usersPokemon.pokemonName.toUpperCase()}</h2>
+      
       <h2>{usersPokemon.pokemonNickname}</h2>
       <h2>{usersPokemon.pokemonTableId}</h2>
       is residing in
       <h3>{usersPokemon.pokemonGameFound}</h3>
-      <img alt="pokemonshiny" src={usersPokemon.pokemonShinyImg} />
+      
+      <img alt="Shiny Pokemon" src={usersPokemon.pokemonShinyImg} />
      <br></br>
       <button onClick={() => deleteUsersPokemon(usersPokemon.id)}>
         Delete Pokemon

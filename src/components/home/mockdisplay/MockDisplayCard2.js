@@ -2,6 +2,7 @@ import React from "react";
 import "./MockDisplayCard.css";
 import { useState, useContext, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 import axios from "axios";
 import AuthContext from "../../../store/authContext";
 
@@ -84,9 +85,10 @@ function MockDisplayCard2({ pokemonTable2 }) {
         )
         .then(() => {
           console.log("sucess")
-          alert("Your Pokemon has been Added to your List")
+          Swal.fire('Pokemon Added to your Checklist!')
         })
         .catch((err) => console.log(err));
+        Swal.fire('You are not logged in!')
   };
 
   const handleChange = event => {
@@ -96,41 +98,41 @@ function MockDisplayCard2({ pokemonTable2 }) {
 }
 
 
-
-
-
-  return (
-    <div className="card">
-      <form className="form-pokemon-card" >
-        <div key={pokemonTable2.pokemontableid}>
-          <h3>{pokemonTable2.pokemontableid}</h3>
-          <h2>{pokemonTable2.pokemonName}</h2>
-          <img alt="pokemon images" src={pokemonTable2.pokemonImg} />
-          <img alt="shiny pokemon images" src={pokemonTable2.pokemonShinyImg} />
-     
-
-          <div>
-    <select value={pokemonGameFound} onChange={handleChange}  pokemonGameFound={pokemonGameFound}>
-      {options.map(option => (
-        <option key={option.value} value={option.value}>
-          {option.label}
-      
-        </option>
-      ))}
-    </select>
-  </div>
-
-          <label for="Mega">Mega Evolution</label>
-          <input type="checkbox" id="Mega" name="Mega" onChange={e => setPokemonMega(e.target.value)}/>
-          <label for="Gmax">Gmax </label>
-          <input type="checkbox" id="Gmax" name="Gmax" onChange={e => setPokemonGmax(e.target.value)}/>
-          <input type="text" id="Nickname" name="Nickname" placeholder="Pokemon's Nickname" onChange={e => setPokemonNickname(e.target.value)} />
-
+return (
+  <div className="card">
+    <form className="pics-and-form" >
+      <div key={pokemonTable2.pokemontableid}>
+        
+        <h2 className="pname">{pokemonTable2.pokemonName.toUpperCase()}</h2>
+<div className="imgout">
+        <div className="imgcontainer">
+        <img alt="pokemon images" src={pokemonTable2.pokemonImg} />
+        <img alt="shiny pokemon images" src={pokemonTable2.pokemonShinyImg} />
         </div>
-        <button onClick={handleSubmit} >Submit</button>
-      </form>
-    </div>
-  );
+</div>
+<div className="form">
+        <div>
+  <select value={pokemonGameFound} onChange={handleChange}  pokemonGameFound={pokemonGameFound}>
+    {options.map(option => (
+      <option key={option.value} value={option.value}>
+        {option.label}
+    
+      </option>
+    ))}
+  </select>
+</div>
+
+        <label for="Mega">Mega Evolution</label>
+        <input type="checkbox" id="Mega" name="Mega" onChange={e => setPokemonMega(e.target.value)}/>
+        <label for="Gmax">Gmax </label>
+        <input type="checkbox" id="Gmax" name="Gmax" onChange={e => setPokemonGmax(e.target.value)}/>
+        <input type="text" id="Nickname" name="Nickname" placeholder="Pokemon's Nickname" onChange={e => setPokemonNickname(e.target.value)} />
+      </div>
+</div>
+      <button onClick={handleSubmit} >Submit</button>
+    </form>
+  </div>
+);
 }
 
 export default MockDisplayCard2;

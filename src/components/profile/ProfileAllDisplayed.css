@@ -1,3 +1,6 @@
 .a{
-    margin-top: 10vh;
+    margin-top: 12vh;
+    display: flex;
+    flex-wrap: wrap;
+    z-index: -1000
 }

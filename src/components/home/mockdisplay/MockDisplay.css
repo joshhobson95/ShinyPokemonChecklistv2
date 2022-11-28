@@ -1,7 +1,16 @@
 .mockdisplay{
-    margin-top: 10vh;
+    margin-top: 12vh;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 1vw 1vh;
+}
+.loading{
+    height: 80%;
+    width: 80%;
+}
+.searchbar{
+    height: 100px;
+    width: 400px;
+
 }
