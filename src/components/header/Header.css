@@ -4,10 +4,21 @@ header{
     width: 100%;
     position: fixed;
     top: 0;
+    color: rgb(255, 255, 255);
+}
+.banner{
+    display: flex;
+    justify-content: center;
+}
+.logo{
+    height: 4%;
+    width: 4%;
+    
 }
 .title{
     display: flex;
     justify-content: center;
+   
 }
 .navlinks{
     display: flex;
@@ -17,23 +28,52 @@ header{
     padding: 10px;
 
 }
+.logout-btn{
+    margin-top: 4px;
+    height: 3vh;
+    width: 8vw;
+    overflow: hidden;
+    font-weight: 700;
+    border-radius: 10px;
+    background-color: rgb(210, 161, 12);
+    margin-right: 10px;
+    color: white;
+  }
+  .logout-btn:hover{    
+    height: 3vh;
+    width: 8vw;
+    overflow: hidden;
+    font-weight: 700;
+    border-radius: 10px;
+    background-color: rgb(32, 26, 9);
+    color: white;
+    margin-right: 10px;
+    box-shadow: -5px -5px 30px 5px rgba(226, 187, 12, 0.205), 5px 5px 30px 5px rgba(11, 113, 87, 0.342);
+}
 
     
 
 
 
-@media only screen and (max-width: 950px) {
+@media only screen and (max-width: 950px),
+screen and (max-height: 1200px ) {
     header{
         background-color: rgb(210, 161, 12);
-        height: 24vh;
+        height: 16vh;
         width: 100vw;
         position: fixed;
-        top: 0;
-        
+        top: 0; 
     }
     .title{
+        height: 20%;
+        width: auto;
         display: flex;
         justify-content: center;
+        
+    }
+    .logo{
+        height: 10%;
+        width: 10%;
     }
     .navlinks{
         display: flex;
@@ -41,8 +81,70 @@ header{
         align-items: space-between;
         justify-content: space-between;
         box-sizing: border-box;
+        font-size: 8pt;
+        
+    }
+    .logout-btn{
+        margin-top: 4px;
+        height: 3vh;
+        width: 15vw;
+        overflow: hidden;
+        font-weight: 700;
+        border-radius: 10px;
+        background-color: rgb(210, 161, 12);
+        margin-left: 5px;
+        margin-right: 5px;
+        color: white;
+      }
+      .logout-btn:hover{    
+        height: 3vh;
+        width: 15vw;
+        overflow: hidden;
+        font-weight: 700;
+        border-radius: 10px;
+        background-color: rgb(32, 26, 9);
+        color: white;
+        margin-left: 5px;
+        margin-right: 5px;
+        box-shadow: -5px -5px 30px 5px rgba(226, 187, 12, 0.205), 5px 5px 30px 5px rgba(11, 113, 87, 0.342);
+    }
+    
+
+}
+@media only screen and (max-width: 800px),
+screen and (max-height: 500px ) {
+    header{
+        background-color: rgb(210, 161, 12);
+        height: 24vh;
+        width: 100vw;
+        position: fixed;
+        top: 0; 
+    }
+    .title{
+        height: 0%;
+        width: 0%;
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+        
+    }
+    .logo{
+        height: 25%;
+        width: 25%;
+        
+    }
+    .navlinks{
+        display: flex;
+        width: 100vw;
+        align-items: space-between;
+        justify-content: space-between;
+        box-sizing: border-box;
+        font-size: 8pt;
+        margin-top: -70px;
         
     }
     
+    
+  
 
 }

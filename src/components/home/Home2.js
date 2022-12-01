@@ -32,16 +32,28 @@ function Home2() {
   return (
 
 
-    <div className='home'>
+    <div className="home">
+    <h1>Welcome to the shiny Pokemon Checklist</h1>
 
-        <h1>Welcome to the shiny Pokemon Checklist</h1>
+    <p>
+      Below is a list of all Pokemon available across every game. You can
+      choose Pokemon that you have found shiny and add them to your personal
+      Shiny Pokemon Checklist! Simply fill out any information that applies and hit the Add Pokemon Button!
+    </p>
 
-        <p> This Checklist below is just an exmaple! If you would like to save your selection, please create an account and head to your profile Page in order to save your personal Checklist</p>
-       <p>Random 6 </p>
-       <p>Gen 9 Dex</p>
-       <p>Total Number of Shinies Registered across all accounts:</p>
-       <h2>{everyUsersPokemon.length}</h2>
-      
+    <br></br>
+    <br></br>
+
+    <h4>Lastest Wiki Update was 11/27/22</h4>
+
+    <br></br>
+    <br></br>
+  <div className='numberof'>
+    <h4>Total Number of Shinies Registered across all accounts:</h4>
+    <div className="numbercontainer">
+    <h1 className="numberofshinies">{everyUsersPokemon.length}</h1>
+    </div>
+  </div>
 
        <NavLink to='/' exact={true}
         style={({ isActive }) =>

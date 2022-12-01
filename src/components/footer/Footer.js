@@ -4,10 +4,13 @@ import "./Footer.css"
 function Footer() {
   return (
     <div className='footer'>
+      <br></br>
         <p>Thanks for checking out our website!</p>
-<p>For help or more information please send an email to theshinypokemonchecklist@gmail.com </p>
+        <img className="email" alt="icon" src='https://cdn-icons-png.flaticon.com/512/4812/4812397.png'/>
+<p>For help or more information please send an email to shinypokemonchecklist@gmail.com </p>
 <p>Thanks to @sofiamartinez for the loading animation</p>
-<p>Also thank you to pokemonproject.org for a great image catalouge and __insertname__ for the tables in the wiki</p>
+<p>Also thank you to pokemonproject.org, pkparisio.com and serebii.net for a great image catalouge</p>
+<br></br>
     </div>
   )
 }

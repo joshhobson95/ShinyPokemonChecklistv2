@@ -1,3 +1,136 @@
 .loginform{
     margin-top:  12vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 90vh;
+    width: 100;
+    background-color: rgb(61, 61, 61);
+}
+.form-auth-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5vh;
+    margin: 100px;
+    height: 70vh;
+    width: 40vw;
+    border: 4px solid rgb(210, 161, 12);
+    background-color:rgba(7, 7, 7, 0.705);
+    color: white;
+    border-radius: 5%;
+    box-shadow: 5px 20px 50px rgb(15, 1, 32);
+}
+
+
+.form-input{
+    height: 5vh;
+    width: 30vw;
+    border-radius: 10px;
+    border: rgb(107, 101, 114);
+    font-size: 16pt;
+    
+   
+
+}
+.form-btn{
+    height: 5vh;
+    width: 10vw;
+    overflow: auto;
+    border-radius: 10px;
+    border: 0;
+    font-weight: 700;
+    background-image: linear-gradient(to bottom, rgb(210, 161, 12), rgb(241, 243, 242));
+    
+}
+.form-btn:hover{
+    background-image: linear-gradient(to bottom, rgb(238, 208, 138), rgb(100, 81, 116));
+    cursor: pointer;
+}
+.form-btn2{
+    height: 5vh;
+    width: 10vw;
+    margin-top: -80px;
+    overflow: auto;
+    border-radius: 10px;
+    border: 0;
+    font-weight: 700;
+    background-image: linear-gradient(to bottom,  rgb(210, 161, 12), rgb(241, 243, 242));
+}
+.form-btn2:hover{
+    background-image: linear-gradient(to bottom, rgb(238, 199, 107), rgb(100, 81, 116));
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 950px),
+screen and (max-height: 1200px )
+ {
+    .loginform{
+        margin-top:  24vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 90vh;
+        width: 100;
+        background-color: rgb(61, 61, 61);
+    }
+    .form-auth-form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5vh;
+        margin: 100px;
+        height: 70%;
+        width: 90%;
+        border: 4px solid rgb(210, 161, 12);
+        background-color: rgb(20 25 21);
+        color: white;
+        border-radius: 5%;
+        box-shadow: 5px 20px 50px rgb(15, 1, 32);
+    }
+    
+    
+    .form-input{
+        height: 10%;
+        width: 70%;
+        border-radius: 10px;
+        border:  rgb(20 25 21);
+        font-size: 16pt;
+        
+       
+    
+    }
+    .form-btn{
+        height: 5vh;
+        width: 30vw;
+        overflow: auto;
+        border-radius: 10px;
+        border: 0;
+        font-weight: 700;
+        background-image: linear-gradient(to bottom, rgb(210, 161, 12), rgb(241, 243, 242));
+        
+    }
+    .form-btn:hover{
+        background-image: linear-gradient(to bottom, rgb(238, 208, 138), rgb(100, 81, 116));
+        cursor: pointer;
+    }
+    .form-btn2{
+        height: 5vh;
+        width: 30vw;
+        margin-top: -80px;
+        overflow: auto;
+        border-radius: 10px;
+        border: 0;
+        font-weight: 700;
+        background-image: linear-gradient(to bottom,  rgb(210, 161, 12), rgb(241, 243, 242));
+    }
+    .form-btn2:hover{
+        background-image: linear-gradient(to bottom, rgb(238, 199, 107), rgb(100, 81, 116));
+        cursor: pointer;
+    }
+
 }

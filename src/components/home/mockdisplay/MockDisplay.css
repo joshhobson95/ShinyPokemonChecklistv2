@@ -1,16 +1,40 @@
 .mockdisplay{
-    margin-top: 12vh;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 1vw 1vh;
+    margin: 10px;
+    
 }
-.loading{
-    height: 80%;
-    width: 80%;
+.loadingz{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    margin-bottom: 10px;
+   
+  
+
 }
+
+
 .searchbar{
-    height: 100px;
-    width: 400px;
+    height: 50px;
+    width: 600px;
+    margin: 10px;
+
+}
+
+@media only screen and (max-width: 950px),
+screen and (max-height: 1200px )
+{
+    .loading{
+        height: auto;
+        width: auto;
+        display: flex;
+        justify-content: center;
+        
+       
+    }
 
 }

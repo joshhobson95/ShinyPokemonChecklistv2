@@ -1,5 +1,5 @@
 import React from "react";
-import "./MockDisplayCard.css";
+import "./MockDisplayCard.css"
 import { useState, useContext} from "react";
 import Swal from "sweetalert2";
 import axios from "axios";
@@ -85,10 +85,23 @@ function MockDisplayCard({ pokemonTable }) {
         )
         .then(() => {
           console.log("sucess")
-         Swal.fire('Pokemon Added to your Checklist!')
+          Swal.fire({
+            title: "Pokemon Added to your checklist",
+            confirmButtonColor: "rgb(210, 161, 12)",
+            customClass: "buttonalert",
+            confirmButtonText: "Sweet!"
+          })
         })
         .catch((err) => console.log(err));
-        Swal.fire('You are not logged in!')
+       {!userId ? (Swal.fire({
+        title: "You are not logged in!",
+        confirmButtonColor: "Red",
+        customClass: "buttonalert",
+        confirmButtonText: "Ok"
+      })) : (
+        console.log('Your Good!')
+       )}
+       
   };
 
   const handleChange = event => {
@@ -132,7 +145,7 @@ function MockDisplayCard({ pokemonTable }) {
           <input type="text" id="Nickname" name="Nickname" placeholder="Pokemon's Nickname" onChange={e => setPokemonNickname(e.target.value)} />
         </div>
 </div>
-        <button onClick={handleSubmit} >Submit</button>
+        <button onClick={handleSubmit} className='addpokemon'>Add Pokemon</button>
       </form>
     </div>
   );

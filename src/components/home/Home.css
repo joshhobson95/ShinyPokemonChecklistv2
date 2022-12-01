@@ -4,3 +4,45 @@
     color:aliceblue;
     overflow-y: hidden;
 }
+body{
+    overflow-y: hidden;
+}
+.text{
+  margin-left: 25%;
+  margin-right: 25%;
+}
+.numberofshinies{
+background-color: rgb(0, 0, 0);
+width: clamp(40px, 40px, 5vw);
+border-radius: 30%;
+box-shadow: -5px -5px 30px 5px rgb(226, 187, 12), 5px 5px 30px 5px rgb(11 113 87);
+}
+.numbercontainer{
+    display: flex;
+    justify-content: center;
+}
+.numberof{
+    height: auto;
+    margin-bottom: 30px;
+     border: 2px solid rgb(32, 31, 24);
+     box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+
+
+.wikiupdate{
+    border: 2px solid rgb(32, 31, 24);
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+@media only screen and (max-width: 950px),
+screen and (max-height: 1200px ){
+    .home{
+        margin-top: 18vh;
+    }
+}
+@media only screen and (max-width: 800px),
+screen and (max-height: 500px ) {
+    .home{
+        margin-top: 24vh;
+    }
+}

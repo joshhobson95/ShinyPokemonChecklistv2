@@ -39,8 +39,9 @@ const usersPokemonAllMapped = usersPokemonAll.filter((usersPokemonAll)=>{
 
 
   return (
+    <div className='abody'>
     <div className='a'>
-      <input type="text" placeholder="search.." onChange={e => setSearch(e.target.value)}></input>
+      <input className="searchbar" type="text" placeholder="Search for a Pokemon..." onChange={e => setSearch(e.target.value)}></input>
 
     {loading ? (
       <img className="loading" alt="Loading..."src={LoadingImg} />
@@ -49,6 +50,9 @@ const usersPokemonAllMapped = usersPokemonAll.filter((usersPokemonAll)=>{
       {usersPokemonAllMapped}
       </div>
       )}
+
+      <p>*note that some pokemon may be missing from grid but will appear once added to you checklist*</p>
+      </div>
       </div>
 
   )

@@ -1,11 +1,17 @@
 .footer {
-    
-    
-  margin-bottom: -13px;
-
+    margin-top: -5px;
+    margin-bottom: -14px;
+   height: 110%;
     width: 100%;
     font-size: 10pt;
-    background-color: rgb(40, 71, 33);
+    background-color:rgba(7, 7, 7, 0.705);
     color: white;
     text-align: center;
+    overflow-y: hidden;
+    overflow: auto;
+    
   }
+.email{
+  height: 25px;
+  width: 25px;
+}

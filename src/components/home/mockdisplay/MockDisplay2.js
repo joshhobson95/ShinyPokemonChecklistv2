@@ -42,8 +42,8 @@ if (search === "") {
 
 
   return( 
-    <div className="mockdisplay">
-       <input type="text" placeholder="search.." onChange={e => setSearch(e.target.value)}></input>
+    <div className={loading ? "loadingz":"mockdisplay"}>
+       <input className="searchbar"type="text" placeholder="Search for a Pokemon..." onChange={e => setSearch(e.target.value)}></input>
        {loading ? (
         <img className="loading" alt="Loading..."src={LoadingImg} />
        ) : ( 

@@ -1,11 +1,9 @@
-import {useState} from 'react'
+
 import './AllCard.css'
+
+
+
 function AllCard({usersPokemonAll}) {
-
-
-
-
-
 
 
 
