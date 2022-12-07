@@ -28,7 +28,7 @@ function MockDisplay2() {
   }, []);
 
 
-  const mappedPokemonTable2 = Array.from(pokemonTable2).filter((pokemonTable2=> {
+  const mappedPokemonTable2 = pokemonTable2.filter((pokemonTable2=> {
 if (search === "") {
   return pokemonTable2
 } else if (pokemonTable2.pokemonName.toLowerCase().includes(search.toLowerCase())){
