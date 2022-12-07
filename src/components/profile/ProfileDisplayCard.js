@@ -45,7 +45,7 @@ function ProfileDisplayCard({ usersPokemon }) {
       {usersPokemon.pokemonMega ? (
         <div className="mega">
         <img className="megastone"alt="megastone" src="https://i.redd.it/hbi5akkwov551.png"/>
-        <p>can Mega Evovle</p>
+        <p>can Mega Evolve</p>
         </div>
       ): (<p></p>)}
      {usersPokemon.pokemonGmax ? (

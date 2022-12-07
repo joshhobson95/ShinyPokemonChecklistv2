@@ -51,7 +51,7 @@ const usersPokemonAllMapped = usersPokemonAll.filter((usersPokemonAll)=>{
       </div>
       )}
 
-      <p>*note that some pokemon may be missing from grid but will appear once added to you checklist*</p>
+      <p className="note">*note that some pokemon may be missing from grid but will appear once added to you checklist*</p>
       </div>
       </div>
 

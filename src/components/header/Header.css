@@ -74,6 +74,7 @@ screen and (max-height: 1200px ) {
     .logo{
         height: 10%;
         width: 10%;
+        
     }
     .navlinks{
         display: flex;
@@ -131,6 +132,7 @@ screen and (max-height: 500px ) {
     .logo{
         height: 25%;
         width: 25%;
+        padding-bottom: 80px;
         
     }
     .navlinks{

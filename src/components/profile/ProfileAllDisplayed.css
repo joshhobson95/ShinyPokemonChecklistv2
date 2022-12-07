@@ -20,6 +20,9 @@ background-color: rgb(61, 61, 61);
     margin: 10px;
 
 }
+.note{
+    font-size: 7pt;
+}
 @media only screen and (max-width: 950px),
 screen and (max-height: 1200px )
 {

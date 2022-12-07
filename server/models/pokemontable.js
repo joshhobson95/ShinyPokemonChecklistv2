@@ -3,7 +3,7 @@ const {DataTypes} = require('sequelize')
 const {sequelize} = require('../util/database')
 
 
-//Lists all Pokemon- only for GET
+
 
 module.exports = {
     PokemonTable : sequelize.define('pokemontable', {

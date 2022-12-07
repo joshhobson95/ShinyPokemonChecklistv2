@@ -13,7 +13,7 @@ body{
 }
 .numberofshinies{
 background-color: rgb(0, 0, 0);
-width: clamp(40px, 40px, 5vw);
+width: clamp(40px, 60px, 5vw);
 border-radius: 30%;
 box-shadow: -5px -5px 30px 5px rgb(226, 187, 12), 5px 5px 30px 5px rgb(11 113 87);
 }

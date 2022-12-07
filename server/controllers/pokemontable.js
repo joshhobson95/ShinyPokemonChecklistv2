@@ -1,7 +1,6 @@
 require("dotenv").config();
-const {SECRET} = process.env
 const {PokemonTable} = require('../models/pokemontable')
-const {User} = require('../models/user')
+
 
 
 

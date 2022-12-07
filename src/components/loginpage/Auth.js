@@ -2,7 +2,6 @@ import {useState, useContext} from 'react'
 import axios from 'axios'
 import './Auth.css'
 import Swal from 'sweetalert2'
-import LoadingGif from '../../assets/LoadingGif.gif'
 
 
 import AuthContext from '../../store/authContext'

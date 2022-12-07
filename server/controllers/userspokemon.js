@@ -1,8 +1,5 @@
 require("dotenv").config();
-const { SECRET } = process.env;
 const { UsersPokemon } = require("../models/userspokemon");
-const { User } = require("../models/user");
-const { PokemonTable } = require("../models/pokemontable");
 const { sequelize } = require("../util/database");
 
 module.exports = {

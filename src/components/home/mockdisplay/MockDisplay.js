@@ -43,6 +43,7 @@ if (search === "") {
 
 
 
+
   return( 
   <div className={loading ? "loadingz":"mockdisplay"}>
      <input  className="searchbar" type="text" placeholder="Search for a Pokemon..."  onChange={e => setSearch(e.target.value)}></input>
