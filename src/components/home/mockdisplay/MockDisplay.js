@@ -31,17 +31,21 @@ function MockDisplay() {
 
 
 
-  const mappedPokemonTable = pokemonTable.filter((pokemonTable=> {
-if (search === "") {
-  return pokemonTable
-} else if (pokemonTable.pokemonName.toLowerCase().includes(search.toLowerCase())){
-  return pokemonTable
-}
-  })).map((pokemonTable) => {
-    return <MockDisplayCard pokemonTable={pokemonTable} />;
-  });  
-// console.log(pokemonTable)
 
+  const mappedPokemonTable = pokemonTable.filter(entry => Object.values(entry).some(val => typeof val === "string" &&  val.includes(search.toLowerCase()))).map((pokemonTable) => {
+        return <MockDisplayCard pokemonTable={pokemonTable} />;
+      });  
+
+
+// if (search === "") {
+//   return pokemonTable
+// } else if (pokemonTable.pokemonName.toLowerCase().includes(search.toLowerCase())){
+//   return pokemonTable
+// }
+//   })).map((pokemonTable) => {
+//     return <MockDisplayCard pokemonTable={pokemonTable} />;
+//   });  
+// // console.log(pokemonTable)
 
 
 
