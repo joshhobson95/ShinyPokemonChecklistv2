@@ -30,7 +30,8 @@ function MockDisplay() {
   }, []);
 
 
-  const mappedPokemonTable = pokemonTable.filter((pokemonTable=> {
+
+  const mappedPokemonTable = Array.from(pokemonTable).filter((pokemonTable=> {
 if (search === "") {
   return pokemonTable
 } else if (pokemonTable.pokemonName.toLowerCase().includes(search.toLowerCase())){
@@ -39,7 +40,7 @@ if (search === "") {
   })).map((pokemonTable) => {
     return <MockDisplayCard pokemonTable={pokemonTable} />;
   });  
-
+console.log(mappedPokemonTable)
 
 
 
