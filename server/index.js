@@ -57,7 +57,7 @@ app.post('/userspokemon', isAuthenticated, addPokemon)
 
 
 
-// sequelize.sync({ force: true }) this wipes all the data clean, users and posts, which could be nice to delete tests. replace sync below
+
 sequelize.sync()
 .then(() => {
 app.listen(SERVER_PORT, () => console.log(`db sync successful & server running on port ${SERVER_PORT}`))})
