@@ -22,7 +22,7 @@ const app = express();
 
 app.use(express.json())
 app.use(cors())
-//                                                                                                                                                                              //
+
 
 
 User.hasMany(UsersPokemon)
@@ -36,19 +36,19 @@ UsersPokemon.belongsTo(PokemonTable)
 
 
 
-//~AUTH
+
 app.post('/register', register)
 app.post('/login', login)
 
 
 
-// //^ GET POSTS - for homepage, no auth required
+
 app.get('/home', getPokemonTable)
 app.get('/2', getPokemonTable2)
 app.get('/3', getPokemonTable3)
 app.get('/home/every', getEveryUsersPokemon)
 
-// //* CRUD POSTS - auth required
+
 app.get('/userspokemon/:userId', getUsersPokemon)
 app.get('/userspokemonall/:userId', getAllUsersPokemonAndMore)
 app.delete('/userspokemon/:id', deleteUsersPokemon)
