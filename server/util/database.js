@@ -1,6 +1,8 @@
 require('dotenv').config()
+require('pg')
 const {CONNECTION_STRING} = process.env
 const Sequelize = require('sequelize')
+
 
 
 const sequelize = new Sequelize(CONNECTION_STRING, {
