@@ -1,6 +1,4 @@
- 
-.card2{
-   
+ .card2{
     height: fit-content;
     width: clamp(1vw, 20vw, 30vw);
     background-color:rgb(84 85 84);
@@ -10,16 +8,11 @@
     padding-bottom: 10px;
     color: rgb(248, 240, 240);
     box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
-
     }
- 
- 
  .profilecontainer{
     align-items: center;
     overflow: hidden;
-
  }
-
  .deletepokemon{
     margin-top: 4px;
     height: 3vh;
@@ -29,18 +22,15 @@
     background-color: rgba(0, 0, 0, 0.295);
     color: white;
   }
-  
   .deletepokemon:hover{    
     height: 3vh;
     width: 8vw;
-    
     font-weight: 700;
     border-radius: 10px;
     background-color: rgb(210, 161, 12);
     color: white;
     box-shadow: -5px -5px 30px 5px rgba(226, 187, 12, 0.205), 5px 5px 30px 5px rgba(11, 113, 87, 0.342);
 }
- 
  .mega{
     display: flex;
     justify-content: center;
@@ -52,34 +42,30 @@
     justify-content: center;
     align-items: center;
 } 
-
   .megastone{
     height: 7%;
     width: 7%;
- 
 } 
 .gmaxband{
     height: 10%;
     width: 10%;
 }
 
+
+
 @media only screen and (max-width: 950px),
 screen and (max-height: 1200px ) {
-  
     .card2{
-        
         display: flex;
         justify-content: center;
         align-items: center;
         height: fit-content;
         width: auto;   
         }
-
 .profilecontainer{
     display: inline;
     justify-content: center;
     align-items: center;
-   
 }
 .pkmnimg{
     display: inline;    
@@ -101,12 +87,9 @@ screen and (max-height: 1200px ) {
     .megastone{
         height: 5%;
         width: 5%;
-     
     } 
     .gmaxband{
         height: 5%;
         width: 5%;
     }
-
-
 }

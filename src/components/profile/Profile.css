@@ -3,11 +3,11 @@
     background-color: rgb(61, 61, 61);
     color:aliceblue;
     overflow-y: hidden;
-
 }
 body{
     overflow-y: hidden;
 }
+
 
 
 @media only screen and (max-width: 950px),
@@ -19,5 +19,4 @@ screen and (max-height: 1200px )
         color:aliceblue;
         overflow-y: hidden;
     }
-  
 }

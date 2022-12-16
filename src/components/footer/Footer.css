@@ -8,8 +8,7 @@
     color: white;
     text-align: center;
     overflow-y: hidden;
-    overflow: auto;
-    
+    overflow: auto;   
   }
 .email{
   height: 25px;

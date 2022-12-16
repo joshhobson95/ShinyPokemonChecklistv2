@@ -6,9 +6,7 @@ import LoadingImg from '../../../assets/LoadingGif.gif'
 
 
 
-
 function MockDisplay2() {
-
 
   const [pokemonTable2, setPokemonTable2] = useState([]);
   const [loading, setLoading] = useState(true)
@@ -18,14 +16,14 @@ function MockDisplay2() {
     axios
       .get("/2")
       .then((res) => {
-      setPokemonTable2(res.data);
-        
+      setPokemonTable2(res.data); 
       })
       .finally(() =>setLoading(false))
       .catch((err) => {
         console.log(err);
       });
   }, []);
+
 
 
   const mappedPokemonTable2 = pokemonTable2.filter((pokemonTable2=> {
@@ -39,8 +37,7 @@ if (search === "") {
   });  
 
 
-
-
+  
   return( 
     <div className={loading ? "loadingz":"mockdisplay"}>
        <input className="searchbar"type="text" placeholder="Search for a Pokemon..." onChange={e => setSearch(e.target.value)}></input>

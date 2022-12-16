@@ -4,7 +4,6 @@
     justify-content: center;
     gap: 1vw 1vh;
     margin: 10px;
-    
 }
 .loadingz{
     display: flex;
@@ -12,18 +11,14 @@
     flex-direction: column;
     overflow: hidden;
     margin-bottom: 10px;
-   
-  
-
 }
-
-
 .searchbar{
     height: 50px;
     width: 600px;
     margin: 10px;
-
 }
+
+
 
 @media only screen and (max-width: 950px),
 screen and (max-height: 1200px )
@@ -32,9 +27,6 @@ screen and (max-height: 1200px )
         height: auto;
         width: auto;
         display: flex;
-        justify-content: center;
-        
-       
+        justify-content: center; 
     }
-
 }

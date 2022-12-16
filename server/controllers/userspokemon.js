@@ -53,6 +53,7 @@ module.exports = {
       res.sendStatus(400);
     }
   }, 
+
   getAllUsersPokemonAndMore: async (req, res) => {
 try {
   const {userId} = req.params;
@@ -84,6 +85,7 @@ res.status(200).send(userspokemonall)
         res.sendStatus(400)
     }
 },
+
 getEveryUsersPokemon:  async (req, res) => {
 try {
   const everyUsersPokemon = await UsersPokemon.findAll({
@@ -95,14 +97,5 @@ try {
   console.log(error)
   res.sendStatus(400)
 }
-
 }
-
-
- 
-
-
-
-
-
 };

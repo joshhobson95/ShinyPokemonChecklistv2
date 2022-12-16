@@ -13,12 +13,10 @@ header{
 .logo{
     height: 4%;
     width: 4%;
-    
 }
 .title{
     display: flex;
     justify-content: center;
-   
 }
 .navlinks{
     display: flex;
@@ -26,7 +24,6 @@ header{
     justify-content: space-between;
     box-sizing: border-box;
     padding: 10px;
-
 }
 .logout-btn{
     margin-top: 4px;
@@ -51,15 +48,13 @@ header{
     box-shadow: -5px -5px 30px 5px rgba(226, 187, 12, 0.205), 5px 5px 30px 5px rgba(11, 113, 87, 0.342);
 }
 
+
     
-
-
-
 @media only screen and (max-width: 950px),
 screen and (max-height: 1200px ) {
     header{
         background-color: rgb(210, 161, 12);
-        height: 16vh;
+        height: 20vh;
         width: 100vw;
         position: fixed;
         top: 0; 
@@ -68,13 +63,11 @@ screen and (max-height: 1200px ) {
         height: 20%;
         width: auto;
         display: flex;
-        justify-content: center;
-        
+        justify-content: center;  
     }
     .logo{
         height: 10%;
-        width: 10%;
-        
+        width: 10%;    
     }
     .navlinks{
         display: flex;
@@ -83,7 +76,6 @@ screen and (max-height: 1200px ) {
         justify-content: space-between;
         box-sizing: border-box;
         font-size: 8pt;
-        
     }
     .logout-btn{
         margin-top: 4px;
@@ -109,14 +101,15 @@ screen and (max-height: 1200px ) {
         margin-right: 5px;
         box-shadow: -5px -5px 30px 5px rgba(226, 187, 12, 0.205), 5px 5px 30px 5px rgba(11, 113, 87, 0.342);
     }
-    
-
 }
+
+
+
 @media only screen and (max-width: 800px),
 screen and (max-height: 500px ) {
     header{
         background-color: rgb(210, 161, 12);
-        height: 24vh;
+        height: 30vh;
         width: 100vw;
         position: fixed;
         top: 0; 
@@ -127,26 +120,41 @@ screen and (max-height: 500px ) {
         display: flex;
         justify-content: center;
         overflow: hidden;
-        
     }
     .logo{
         height: 25%;
         width: 25%;
         padding-bottom: 80px;
-        
     }
     .navlinks{
         display: flex;
+        height: fit-content;
         width: 100vw;
         align-items: space-between;
         justify-content: space-between;
         box-sizing: border-box;
-        font-size: 8pt;
-        margin-top: -70px;
-        
+        margin-top: -70px;    
     }
-    
-    
-  
+}
 
+
+
+@media only screen and (max-height: 1000px ),
+screen and (max-width: 720px) {
+    header{
+        background-color: rgb(210, 161, 12);
+        height: 30vh;
+        width: 100vw;
+        position: fixed;
+        top: 0; 
+    }
+}
+
+
+
+@media only screen and (max-width: 2500px ),
+screen and (max-height: 1100px){
+    header{
+        height: fit-content;
+    }
 }

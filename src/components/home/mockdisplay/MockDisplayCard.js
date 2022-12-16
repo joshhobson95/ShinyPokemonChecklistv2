@@ -58,14 +58,11 @@ function MockDisplayCard({ pokemonTable }) {
   const [pokemonNickname, setPokemonNickname] = useState("")
   const [idSpecial, setIdSpecial] = useState(0);
 
-
   const handleSubmit = (e) => {
     e.preventDefault();
-
     axios
         .post(
           "/userspokemon", 
-          
           {
             idSpecial,
             pokemonQuantity,  
@@ -75,7 +72,6 @@ function MockDisplayCard({ pokemonTable }) {
             pokemonNickname,
             userId,
             pokemontablePokemontableid: pokemonTable.pokemontableid,
-            
           },
           {
             headers: {
@@ -101,24 +97,20 @@ function MockDisplayCard({ pokemonTable }) {
       })) : (
         console.log('Your Good!')
        )}
-       
   };
+
 
   const handleChange = event => {
   setPokemonGameFound(event.target.value)
   console.log(event.target.value)
-
 }
-
-
 
 
 
   return (
     <div className="card">
       <form className="pics-and-form" >
-        <div key={pokemonTable.pokemontableid}>
-          
+        <div key={pokemonTable.pokemontableid}>     
           <h2 className="pname">{pokemonTable.pokemonName.toUpperCase()}</h2>
 <div className="imgout">
           <div className="imgcontainer">
@@ -132,12 +124,10 @@ function MockDisplayCard({ pokemonTable }) {
       {options.map(option => (
         <option key={option.value} value={option.value}>
           {option.label}
-      
         </option>
       ))}
     </select>
   </div>
-
           <label for="Mega">Mega Evolution</label>
           <input type="checkbox" id="Mega" name="Mega" onChange={e => setPokemonMega(e.target.value)}/>
           <label for="Gmax">Gmax </label>

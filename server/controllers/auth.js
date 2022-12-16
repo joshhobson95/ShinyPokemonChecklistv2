@@ -6,7 +6,6 @@ const jwt = require('jsonwebtoken')
 
 
 
-
 const createToken = (username, id) => {
     return jwt.sign(
         {
@@ -19,6 +18,8 @@ const createToken = (username, id) => {
         }
     )
 }
+
+
 
 module.exports = {
     register: async (req, res) => {
@@ -66,7 +67,6 @@ module.exports = {
                 } else {
                     res.status(400).send('cannot log in')
                 }
-
             } else {
                 res.status(400).send('cannot log in')
             }

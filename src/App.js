@@ -1,4 +1,3 @@
-
 import './App.css';
 import { Routes, Route, Navigate} from 'react-router-dom';
 import { useContext } from 'react';
@@ -12,9 +11,6 @@ import Wiki from './components/wiki/Wiki';
 import ProfileAllDisplayed from './components/profile/ProfileAllDisplayed';
 import AuthContext from './store/authContext'; 
 import Footer from './components/footer/Footer';
-
-
-
 
 
 
@@ -35,13 +31,8 @@ const authCtx = useContext(AuthContext);
          <Route path='/auth' element={!authCtx.token ? <Auth/> : <Navigate to='/'/>}/>
          <Route path='/profile' element={authCtx.token ? <Profile/> : <Navigate to='/auth'/>}/>
          <Route path='profile/AllPokemonDisplayed' element={authCtx.token ? <ProfileAllDisplayed />: <Navigate to='/auth'/>} />
-
-         
-    
-         
         </Routes>
       <Footer />
-
     </div>
   )
 }

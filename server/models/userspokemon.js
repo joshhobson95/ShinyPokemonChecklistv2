@@ -1,14 +1,10 @@
-
 const {DataTypes} = require('sequelize')
 const {sequelize} = require('../util/database')
 
 
 
-
-
 module.exports = {
     UsersPokemon : sequelize.define('userspokemon', {
-
         id: {
             type: DataTypes.INTEGER,
             autoIncrement: true,
@@ -28,11 +24,5 @@ module.exports = {
             type: DataTypes.DATE,
             allowNull: true
         },
-
-     
-  
-     
-
     })
-    
 }

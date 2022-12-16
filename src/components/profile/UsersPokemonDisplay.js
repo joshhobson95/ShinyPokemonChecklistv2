@@ -1,13 +1,9 @@
 import { useState, useEffect, useContext, useCallback } from "react";
 import axios from "axios";
-
 import ProfileDisplayCard from './ProfileDisplayCard'
 import AuthContext from "../../store/authContext";
 import {NavLink} from 'react-router-dom'
 import LoadingImg from '../../assets/LoadingGif.gif'
- 
- 
- 
  
  
  
@@ -19,8 +15,6 @@ const { userId } = useContext(AuthContext);
   const [usersPokemon, setUsersPokemon] = useState([]);
   const [search, setSearch] = useState('')
  
-
-
   const getUsersPokemon = useCallback(() => {
     axios.get(`/userspokemon/${userId}`)
     .then(res => setUsersPokemon(res.data))  
@@ -32,10 +26,6 @@ useEffect(() => {
     getUsersPokemon()
 }, [getUsersPokemon])
 
-
-
-
-  
   const usersPokemonMapped = usersPokemon.filter((usersPokemon)=>{
     if (search === "") {
       return usersPokemon
@@ -48,8 +38,6 @@ useEffect(() => {
 
    
   
-  
-
   return (
     <div className={loading ? "loadingz":"mockdisplay"}>
       <div className="mockdisplay2">
@@ -59,12 +47,9 @@ useEffect(() => {
     backgroundColor: "black",
     textDecoration: "none",
     fontWeight: 700,
-    
-  
   })}
   to='AllPokemonDisplayed'>Click here to see your progress</NavLink>
       </div>
-
   {loading ? (
     <img className="loading" alt="Loading..."src={LoadingImg} />
   ) : (
@@ -72,7 +57,6 @@ useEffect(() => {
       {usersPokemonMapped}
     </div>
   )}
-    
     </div>
 )
 }

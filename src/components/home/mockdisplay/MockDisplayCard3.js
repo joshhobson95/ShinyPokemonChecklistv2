@@ -1,7 +1,6 @@
 import React from "react";
 import "./MockDisplayCard.css";
-import { useState, useContext, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useState, useContext } from "react";
 import Swal from "sweetalert2";
 import axios from "axios";
 import AuthContext from "../../../store/authContext";
@@ -9,7 +8,7 @@ import AuthContext from "../../../store/authContext";
 
 function MockDisplayCard3({ pokemonTable3 }) {
   const { token, userId } = useContext(AuthContext);
-  const navigate = useNavigate();
+
   const options = [  
     { value: "Red", label: "Red" },
     { value: "Blue", label: "Blue" },
@@ -58,14 +57,11 @@ function MockDisplayCard3({ pokemonTable3 }) {
   const [pokemonNickname, setPokemonNickname] = useState("")
   const [idSpecial, setIdSpecial] = useState(0);
 
-
   const handleSubmit = (e) => {
     e.preventDefault();
-
     axios
         .post(
           "/userspokemon", 
-          
           {
             idSpecial,
             pokemonQuantity,  
@@ -74,8 +70,7 @@ function MockDisplayCard3({ pokemonTable3 }) {
             pokemonGmax,
             pokemonNickname,
             userId,
-            pokemontablePokemontableid: pokemonTable3.pokemontableid,
-            
+            pokemontablePokemontableid: pokemonTable3.pokemontableid,   
           },
           {
             headers: {
@@ -102,7 +97,6 @@ function MockDisplayCard3({ pokemonTable3 }) {
         console.log('Your Good!')
        )}
   };
-
   const handleChange = event => {
   setPokemonGameFound(event.target.value)
   console.log(event.target.value)
@@ -111,13 +105,10 @@ function MockDisplayCard3({ pokemonTable3 }) {
 
 
 
-
-
 return (
   <div className="card">
     <form className="pics-and-form" >
       <div key={pokemonTable3.pokemontableid}>
-        
         <h2 className="pname">{pokemonTable3.pokemonName.toUpperCase()}</h2>
 <div className="imgout">
         <div className="imgcontainer">
@@ -131,12 +122,10 @@ return (
     {options.map(option => (
       <option key={option.value} value={option.value}>
         {option.label}
-    
       </option>
     ))}
   </select>
 </div>
-
         <label for="Mega">Mega Evolution</label>
         <input type="checkbox" id="Mega" name="Mega" onChange={e => setPokemonMega(e.target.value)}/>
         <label for="Gmax">Gmax </label>

@@ -6,9 +6,7 @@ import LoadingImg from '../../../assets/LoadingGif.gif'
 
 
 
-
 function MockDisplay() {
-
 
   const [pokemonTable, setPokemonTable] = useState([]);
   const [loading, setLoading] = useState(true)
@@ -17,11 +15,9 @@ function MockDisplay() {
   useEffect(() => {
     axios
       .get("/home")
-     
       .then((res) => {
         setPokemonTable(res.data);
         console.log(res.data)
-        
       })
       .finally(() =>setLoading(false))
       .catch((err) => {
@@ -30,7 +26,6 @@ function MockDisplay() {
   }, []);
 
 
-console.log(pokemonTable)
 
   const mappedPokemonTable = pokemonTable?.filter((pokemonTable=>  {
 if (search === "") {
@@ -41,7 +36,6 @@ if (search === "") {
   })).map((pokemonTable) => {
     return <MockDisplayCard pokemonTable={pokemonTable} />;
   });  
-
 
 
 

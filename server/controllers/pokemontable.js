@@ -3,22 +3,14 @@ const {PokemonTable} = require('../models/pokemontable')
 
 
 
-
-
-
 module.exports = {
-
     getPokemonTable: async (req, res) => {
         try {
-            const pokemontable = await PokemonTable.findAll({
-                
+            const pokemontable = await PokemonTable.findAll({             
         limit: 386,
-
         order: [
             ["pokemontableid", "ASC"]
-           ],
-               
-               
+           ],                      
             })
             res.status(200).send(pokemontable)
         } catch (error) {
@@ -27,6 +19,7 @@ module.exports = {
             res.sendStatus(400)
         }
     },
+
     getPokemonTable2: async (req, res) => {
         try {
             const pokemontable2 = await PokemonTable.findAll({
@@ -43,11 +36,11 @@ module.exports = {
             res.sendStatus(400)
         }
     }, 
+
     getPokemonTable3: async (req, res) => {
         try {
             const pokemontable3 = await PokemonTable.findAll({
                 offset: 721,
-                 
                  order: [
                     ["pokemontableid", "ASC"]
                    ],
@@ -59,9 +52,4 @@ module.exports = {
             res.sendStatus(400)
         }
     } 
-    
-
-
-
-
 }

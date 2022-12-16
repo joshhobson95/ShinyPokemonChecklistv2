@@ -23,17 +23,12 @@
     border-radius: 5%;
     box-shadow: 5px 20px 50px rgb(15, 1, 32);
 }
-
-
 .form-input{
     height: 5vh;
     width: 30vw;
     border-radius: 10px;
     border: rgb(107, 101, 114);
     font-size: 16pt;
-    
-   
-
 }
 .form-btn{
     height: 5vh;
@@ -42,8 +37,7 @@
     border-radius: 10px;
     border: 0;
     font-weight: 700;
-    background-image: linear-gradient(to bottom, rgb(210, 161, 12), rgb(241, 243, 242));
-    
+    background-image: linear-gradient(to bottom, rgb(210, 161, 12), rgb(241, 243, 242)); 
 }
 .form-btn:hover{
     background-image: linear-gradient(to bottom, rgb(238, 208, 138), rgb(100, 81, 116));
@@ -63,6 +57,8 @@
     background-image: linear-gradient(to bottom, rgb(238, 199, 107), rgb(100, 81, 116));
     cursor: pointer;
 }
+
+
 
 @media only screen and (max-width: 950px),
 screen and (max-height: 1200px )
@@ -92,17 +88,12 @@ screen and (max-height: 1200px )
         border-radius: 5%;
         box-shadow: 5px 20px 50px rgb(15, 1, 32);
     }
-    
-    
     .form-input{
         height: 10%;
         width: 70%;
         border-radius: 10px;
         border:  rgb(20 25 21);
         font-size: 16pt;
-        
-       
-    
     }
     .form-btn{
         height: 5vh;
@@ -112,7 +103,6 @@ screen and (max-height: 1200px )
         border: 0;
         font-weight: 700;
         background-image: linear-gradient(to bottom, rgb(210, 161, 12), rgb(241, 243, 242));
-        
     }
     .form-btn:hover{
         background-image: linear-gradient(to bottom, rgb(238, 208, 138), rgb(100, 81, 116));
@@ -132,5 +122,4 @@ screen and (max-height: 1200px )
         background-image: linear-gradient(to bottom, rgb(238, 199, 107), rgb(100, 81, 116));
         cursor: pointer;
     }
-
 }

@@ -1,7 +1,5 @@
-
 const {DataTypes} = require('sequelize')
 const {sequelize} = require('../util/database')
-
 
 
 

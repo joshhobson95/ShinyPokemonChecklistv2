@@ -1,12 +1,14 @@
-
 import "./ProfileDisplayCard.css";
 import {  useContext} from "react";
 import axios from "axios";
 import Swal from "sweetalert2";
 import AuthContext from "../../store/authContext";
 
+
+
 function ProfileDisplayCard({ usersPokemon }) {
-  const {  token } = useContext(AuthContext);
+
+  const { token } = useContext(AuthContext);
 
   const deleteUsersPokemon = (id) => {
     axios
@@ -20,8 +22,7 @@ function ProfileDisplayCard({ usersPokemon }) {
           title: "Your Pokemon was deleted",
           confirmButtonColor: "rgb(210, 161, 12)",
           customClass: "buttonalert",
-          confirmButtonText: "Thanks",
-          
+          confirmButtonText: "Thanks", 
         })
         .finally(()=>window.location.reload(false))
       })
@@ -36,7 +37,6 @@ function ProfileDisplayCard({ usersPokemon }) {
     <div className="card2">
         <div className="profilecontainer">
       <h2>{usersPokemon.pokemonName.toUpperCase()}</h2>
-      
       <h2>{usersPokemon.pokemonNickname ? (<p>a.k.a "{usersPokemon.pokemonNickname}"</p>) : ("") }</h2>
       <h2>{usersPokemon.pokemonTableId}</h2>
       is residing in
@@ -55,9 +55,7 @@ function ProfileDisplayCard({ usersPokemon }) {
         </div>
       ): (<p></p>)}
       </div>
-      
       <img className="pkmnimg"alt="Shiny Pokemon" src={usersPokemon.pokemonShinyImg} />
-   
      <br></br>
       <button className="deletepokemon" onClick={() => deleteUsersPokemon(usersPokemon.id)}>
         Delete Pokemon

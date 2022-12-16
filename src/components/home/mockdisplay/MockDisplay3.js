@@ -6,9 +6,7 @@ import LoadingImg from '../../../assets/LoadingGif.gif'
 
 
 
-
 function MockDisplay3() {
-
 
   const [pokemonTable3, setPokemonTable3] = useState([]);
   const [loading, setLoading] = useState(true)
@@ -19,13 +17,13 @@ function MockDisplay3() {
       .get("/3")
       .then((res) => {
         setPokemonTable3(res.data);
-     
       })
       .finally(() =>setLoading(false))
       .catch((err) => {
         console.log(err);
       });
   }, []);
+
 
 
   const mappedPokemonTable3 = pokemonTable3.filter((pokemonTable3=> {
@@ -37,7 +35,6 @@ if (search === "") {
   })).map((pokemonTable3) => {
     return <MockDisplayCard3 pokemonTable3={pokemonTable3} />;
   });  
-
 
 
 

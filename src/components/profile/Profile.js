@@ -5,28 +5,8 @@ import UsersPokemonDisplay from "./UsersPokemonDisplay";
 
 
 function Profile() {
-
-
-
-
-
   return <div className="profile">
-
-
-
-
-
-
-
-
-
-
 <UsersPokemonDisplay />
-
-
-
-
-
   </div>;
 }
 

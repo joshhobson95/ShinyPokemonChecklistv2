@@ -3,10 +3,8 @@ import { useContext } from 'react'
 import {NavLink} from 'react-router-dom'
 import Swal from 'sweetalert2'
 import  Logo from '../../assets/FinalLoad.png'
-
-
-
 import AuthContext from '../../store/authContext'
+
 
 function Header () {
     const authCtx = useContext(AuthContext)
@@ -19,23 +17,13 @@ const logout = () => {
     confirmButtonText: "Ok"
   })
 authCtx.logout()
-
 }
-
-
-
-
     return (
         <header>
-
 <div className='banner'>
  <img alt="logo" className="logo"src={Logo}/>
  <h1 className='title'>Shiny Pokemon Checklist</h1>
 </div>
-  
- 
-
-
  <div className='navlinks'>
         <div>
             <NavLink to='/'
@@ -46,18 +34,14 @@ authCtx.logout()
                   textDecoration: "none",
                   fontWeight: "1000",
                   fontSize : "16pt",
-                  backgroundColor: "rgb(0, 0, 0)",
-                  
-
+                  backgroundColor: "rgb(0, 0, 0)",               
                 }
               : { 
                 color: '#fff',
                 textDecoration: "none",
                 fontWeight: "1000",
-                fontSize : "16pt",
-                          
+                fontSize : "16pt",                       
             }}
-  
            >Home </NavLink>
         </div>
         <div >
@@ -69,16 +53,13 @@ authCtx.logout()
                   textDecoration: "none",
                   fontWeight: "1000",
                   fontSize : "16pt",
-                  backgroundColor: "rgb(0, 0, 0)",
-                  
-
+                  backgroundColor: "rgb(0, 0, 0)",              
                 }
               : { 
                 color: '#fff',
                 textDecoration: "none",
                 fontWeight: "1000",
-                fontSize : "16pt",
-                          
+                fontSize : "16pt",                     
             }}
         >Login or Signup</NavLink>
         </div>
@@ -92,15 +73,12 @@ authCtx.logout()
               fontWeight: "1000",
               fontSize : "16pt",
               backgroundColor: "rgb(0, 0, 0)",
-              
-
             }
           : { 
             color: '#fff',
             textDecoration: "none",
             fontWeight: "1000",
-            fontSize : "16pt",
-                      
+            fontSize : "16pt",               
         }}
         >Shiny Hunting  Wiki</NavLink>
         </div>
@@ -114,8 +92,6 @@ authCtx.logout()
               fontWeight: "1000",
               fontSize : "16pt",
               backgroundColor: "rgb(0, 0, 0)",
-              
-
             }
           : { 
             color: '#fff',
@@ -125,8 +101,6 @@ authCtx.logout()
             borderRadius: '30%'           
         }}>Profile</NavLink>
         </div>
-     
-
         <div>
         <button className='logout-btn' onClick={() => logout()} >Logout</button>
         </div>
@@ -134,4 +108,5 @@ authCtx.logout()
         </header>
     )
 }
+
 export default Header;

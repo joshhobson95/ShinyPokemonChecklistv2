@@ -18,8 +18,4 @@ const sequelize = new Sequelize(CONNECTION_STRING, {
 
 module.exports = {
     sequelize
-   
-
 }
-
-//added ssl require reute and protocol and require(pg)

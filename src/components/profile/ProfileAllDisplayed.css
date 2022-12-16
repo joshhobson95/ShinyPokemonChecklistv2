@@ -1,24 +1,18 @@
 body{
-    
 background-color: rgb(61, 61, 61);
 }
-
 .a{
     margin-top: 18vh;
     display: flex;
     flex-wrap: wrap;
     z-index: -1000;
     display: flex;
-    justify-content: center;
-    
-   
+    justify-content: center; 
 }
 .searchbar2{
-  
     height: 50px;
     width: 600px;
     margin: 10px;
-
 }
 .note{
     font-size: 7pt;
@@ -36,19 +30,13 @@ screen and (max-height: 1200px )
         z-index: -1000;
         justify-content: center;
         margin-top: 5px;
-        
     }
     .searchbar2{
-      
       height: 60%;
         width: 95%;
         margin: 10px; 
-     
     } 
     .mockdisplay2{
         height: 10vh;
     }
-
-
-
 }
